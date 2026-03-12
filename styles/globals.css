@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply bg-cream text-ink font-body antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-heading;
+}
+
+.section {
+  @apply py-24 px-6;
+}
+
+.container {
+  @apply max-w-7xl mx-auto;
+}
+
+.btn-primary {
+  @apply bg-gold text-ink px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition;
+}
+
+.btn-outline {
+  @apply border border-gold text-gold px-6 py-3 rounded-lg font-semibold hover:bg-gold hover:text-ink transition;
+}
