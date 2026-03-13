@@ -1,6 +1,6 @@
 export default function MenuHero() {
   return (
-    <section className="relative h-[60vh] flex items-center justify-center bg-[url('/menu-hero.jpg')] bg-cover bg-center">
+    <section className="relative h-[60vh] flex items-center justify-center bg-[url('/home2.jpg')] bg-cover bg-center">
       <div className="absolute inset-0 bg-black/60" />
 
       <div className="relative z-10 text-center px-6">
