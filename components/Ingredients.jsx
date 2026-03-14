@@ -8,17 +8,17 @@ export default function Ingredients() {
           {
             title: "Fresh Seafood",
             text: "Daily-sourced fish and shellfish inspired by Adriatic coastal cuisine.",
-            img: "/ingredients-1.jpg",
+            img: "/fishplate.webp",
           },
           {
             title: "Seasonal Produce",
             text: "Locally grown vegetables and herbs chosen at peak freshness.",
-            img: "/ingredients-2.jpg",
+            img: "/grilledbranzin.jpg",
           },
           {
             title: "Artisan Oils & Spices",
             text: "Cold-pressed olive oils and hand-selected Mediterranean spices.",
-            img: "/ingredients-3.jpg",
+            img: "/stek.jpg",
           },
         ].map((item, i) => (
           <div

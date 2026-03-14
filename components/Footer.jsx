@@ -40,30 +40,36 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-navy text-cream">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-16 right-0 h-48 w-48 rounded-full bg-gold/10 blur-3xl" />
-        <div className="absolute bottom-0 left-0 h-40 w-40 rounded-full bg-white/5 blur-3xl" />
+      {/* Background accents */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -top-20 right-0 h-56 w-56 rounded-full bg-gold/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-44 w-44 rounded-full bg-white/5 blur-3xl" />
       </div>
 
-      <div className="container relative z-10 py-20">
-        <div className="grid gap-14 border-b border-white/10 pb-14 md:grid-cols-3">
-          <div>
-            <p className="mb-3 text-xs uppercase tracking-[0.35em] text-gold">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-16 lg:py-20">
+        <div className="grid gap-10 border-b border-white/10 pb-10 sm:gap-12 sm:pb-12 lg:grid-cols-[1.2fr_0.8fr_1fr] lg:gap-14 lg:pb-14">
+          {/* Brand */}
+          <div className="text-center lg:text-left">
+            <p className="mb-3 text-[11px] uppercase tracking-[0.35em] text-gold sm:text-xs">
               Bistro Adriatik
             </p>
-            <h3 className="font-heading text-3xl mb-4">Refined Coastal Dining</h3>
-            <p className="max-w-sm text-cream/70 leading-relaxed">
+
+            <h3 className="mb-4 font-heading text-2xl leading-tight sm:text-3xl">
+              Refined Coastal Dining
+            </h3>
+
+            <p className="mx-auto max-w-md text-sm leading-7 text-cream/70 sm:text-base lg:mx-0">
               Mediterranean cuisine inspired by the Adriatic coast, crafted with
               seasonal ingredients and timeless hospitality in an elegant setting.
             </p>
 
-            <div className="mt-8 flex gap-3">
+            <div className="mt-7 flex justify-center gap-3 lg:justify-start">
               {socialLinks.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   aria-label={item.name}
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-cream/80 transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-gold hover:text-navy"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-cream/80 transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-gold hover:text-navy sm:h-11 sm:w-11"
                 >
                   {item.icon}
                 </a>
@@ -71,16 +77,18 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
-            <h4 className="mb-6 text-sm uppercase tracking-[0.3em] text-gold">
+          {/* Navigation */}
+          <div className="text-center lg:text-left">
+            <h4 className="mb-5 text-xs uppercase tracking-[0.3em] text-gold sm:mb-6 sm:text-sm">
               Navigate
             </h4>
-            <ul className="space-y-4">
+
+            <ul className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-1">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="inline-flex text-cream/75 transition duration-300 hover:translate-x-1 hover:text-gold"
+                    className="inline-flex text-sm text-cream/75 transition duration-300 hover:translate-x-1 hover:text-gold sm:text-base"
                   >
                     {link.name}
                   </Link>
@@ -89,12 +97,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h4 className="mb-6 text-sm uppercase tracking-[0.3em] text-gold">
+          {/* Contact / Visit */}
+          <div className="text-center lg:text-left">
+            <h4 className="mb-5 text-xs uppercase tracking-[0.3em] text-gold sm:mb-6 sm:text-sm">
               Visit Us
             </h4>
 
-            <div className="space-y-5 text-cream/70 leading-relaxed">
+            <div className="space-y-5 text-sm leading-7 text-cream/70 sm:text-base">
               <p>
                 Bistro Adriatik
                 <br />
@@ -104,8 +113,18 @@ export default function Footer() {
               </p>
 
               <div className="space-y-2">
-                <p className="transition hover:text-gold">+385 91 000 0000</p>
-                <p className="transition hover:text-gold">info@bistroadriatik.com</p>
+                <a
+                  href="tel:+385910000000"
+                  className="block transition hover:text-gold"
+                >
+                  +385 91 000 0000
+                </a>
+                <a
+                  href="mailto:info@bistroadriatik.com"
+                  className="block break-all transition hover:text-gold sm:break-normal"
+                >
+                  info@bistroadriatik.com
+                </a>
               </div>
 
               <p className="text-sm text-cream/50">
@@ -115,11 +134,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 pt-6 text-sm text-cream/50 md:flex-row">
+        <div className="flex flex-col gap-3 pt-6 text-center text-xs text-cream/50 sm:text-sm md:flex-row md:items-center md:justify-between md:text-left">
           <p>© {new Date().getFullYear()} Bistro Adriatik. All rights reserved.</p>
-          <p className="text-center md:text-right">
-            Designed for elegant dining experiences.
-          </p>
+          <p className="md:text-right">Designed for elegant dining experiences.</p>
         </div>
       </div>
     </footer>
